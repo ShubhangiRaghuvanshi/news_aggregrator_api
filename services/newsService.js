@@ -1,6 +1,6 @@
 const axios=require('axios');
 require('dotenv').config();
-const{getCache,setCache}=require("./cacheService");
+const{getCache,setCache}=require("../services/redisClient");
 const newsService= async(query)=>{
     try{
     if(!query || query.trim()=== '' || typeof query !== "string")
